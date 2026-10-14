@@ -536,7 +536,7 @@
       root.dir = l === 'ar' ? 'rtl' : 'ltr';
       try { localStorage.setItem('myc-lang', l); } catch (e) {}
     });
-    document.querySelectorAll('.copy').forEach(function (b) {
+    document.querySelectorAll('button.copy').forEach(function (b) {
       b.addEventListener('click', function () {
         var v = b.getAttribute('data-copy');
         var labels = b.querySelectorAll('span');
