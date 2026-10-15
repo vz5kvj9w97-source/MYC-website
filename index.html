@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" translate="no">
 <head>
 <meta charset="utf-8">
+<meta name="google" content="notranslate">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="img/logo-mark.png">
 <link rel="canonical" href="https://www.mycksa.com/">
@@ -21,7 +22,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
 <script>
   (function () {
-    var l = 'en';
+    // Arabic-language devices open the Arabic version instead of machine-translating the English one
+    var l = /^ar\b/i.test(navigator.language || '') ? 'ar' : 'en';
     try { l = localStorage.getItem('myc-lang') || l; } catch (e) {}
     if (location.hash === '#ar') l = 'ar';
     if (location.hash === '#en') l = 'en';
